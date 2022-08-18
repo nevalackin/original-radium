@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+targetCompatibility = JavaVersion.VERSION_1_8
+sourceCompatibility = JavaVersion.VERSION_1_8
+
+group 'io.github.nevalackin'
+version '1.4.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation fileTree('lib')
+}
+
+run {
+    mainClassName = 'Start'
+    jvmArgs = ['-Djava.library.path=../natives']
+    workingDir = 'run/'
+}
