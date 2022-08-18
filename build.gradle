@@ -22,3 +22,10 @@ run {
     jvmArgs = ['-Djava.library.path=../natives']
     workingDir = 'run/'
 }
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'net.minecraft.client.Main'
+    }
+
+}
