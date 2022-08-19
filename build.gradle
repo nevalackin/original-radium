@@ -18,14 +18,14 @@ dependencies {
 }
 
 run {
+    project.mkdir 'run'
     mainClassName = 'Start'
     jvmArgs = ['-Djava.library.path=../natives']
-    workingDir = 'run/'
+    workingDir = 'run'
 }
 
 jar {
     manifest {
         attributes 'Main-Class': 'net.minecraft.client.Main'
     }
-
 }
